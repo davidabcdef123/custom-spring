@@ -50,20 +50,27 @@ public class DispatchServlet extends HttpServlet {
         // 每种策略可以自定义干预，但是最终的结果都是一致
         // ModelAndView
         //9大组件初始化
+        //todo
         initMultipartResolver(context);//文件上传解析
+        //todo
         initLocaleResolver(context);//本地化解析
+        //todo
         initThemeResolver(context);//主题解析
 
         initHandlerMappings(context);//通过HandlerMapping，将请求映射到处理器
 
         initHandlerAdapters(context);////通过HandlerAdapter进行多类型的参数动态匹配
 
+        //todo
         initHandlerExceptionResolvers(context);//如果执行过程中遇到异常，将交给HandlerExceptionResolver来解析
 
+        //todo
         initRequestToViewNameTranslator(context);//直接解析请求到视图名
 
+        //todo
         initViewResolvers(context);//通过viewResolver解析逻辑视图到具体视图实现
 
+        //todo
         initFlashMapManager(context);//flash映射管理器
     }
 
@@ -71,6 +78,7 @@ public class DispatchServlet extends HttpServlet {
     private void initFlashMapManager(ApplicationContext context) {
     }
 
+    //todo
     private void initViewResolvers(ApplicationContext context) {
     }
 

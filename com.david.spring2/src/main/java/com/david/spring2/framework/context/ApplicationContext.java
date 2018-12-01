@@ -190,9 +190,9 @@ public class ApplicationContext extends DefaultListableBeanFactory implements Be
         for (Method m : clazz.getMethods()) {
             Matcher matcher = pattern.matcher(m.toString());
             if (matcher.matches()) {
+                //能满足切面规则的类，添加的AOP配置中
+                config.put(m, aspectClass.newInstance(), new Method[]{aspectClass.getMethod(before[1]), aspectClass.getMethod(after[1])});
             }
-            //能满足切面规则的类，添加的AOP配置中
-            config.put(m, aspectClass.newInstance(), new Method[]{aspectClass.getMethod(before[1]), aspectClass.getMethod(after[1])});
         }
         return config;
     }
