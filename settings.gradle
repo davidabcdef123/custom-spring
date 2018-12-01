@@ -2,4 +2,5 @@ rootProject.name = 'com.david.spring'
 include 'com.david.springmvc'
 include 'com.david.userspring1'
 include 'com.david.spring2'
+include 'com.david.spring5'
 
